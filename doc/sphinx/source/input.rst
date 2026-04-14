@@ -299,6 +299,8 @@ A list of the datasets for which a CMORizers is available is provided in the fol
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | E-OBS                                  | tas, tasmin, tasmax, pr, psl (day, Amon)                                                             |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
+| EN4                                    | thetao, so, tos, sos (Omon)                                                                          |   2  | Python          |
++----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | Eppley-VGPM-MODIS                      | intpp (Omon)                                                                                         |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | ERA5 [#note1]_                         | cl, clt, evspsbl, evspsblpot, mrro, pr, prsn, ps, psl, ptype, rls, rlds, rlns, rlus [#note2]_, rsds, |   3  | n/a             |
@@ -312,7 +314,7 @@ A list of the datasets for which a CMORizers is available is provided in the fol
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | ERA-Interim-Land                       | sm (Lmon)                                                                                            |   3  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
-| ESACCI-AEROSOL                         | abs550aer, od550aer, od550aerStderr, od550lt1aer, od870aer, od870aerStderr (aero)                    |   2  | NCL             |
+| ESACCI-AEROSOL                         | abs550aer, od550aer, od550aerStderr, od550lt1aer, od870aer, od870aerStderr (aero)                    |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | ESACCI-BIOMASS                         | agb (Lyr, frequency=yr)                                                                              |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
@@ -341,6 +343,8 @@ A list of the datasets for which a CMORizers is available is provided in the fol
 | ESACCI-SEAICE                          | siconc (SIday, SImon)                                                                                |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | ESACCI-SEA-SURFACE-SALINITY            | sos (Omon)                                                                                           |   2  | Python          |
++----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
+| ESACCI-SNOW                            | snc, snw (day)                                                                                       |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
 | ESACCI-SOILMOISTURE                    | sm (Eday, Lmon), smStderr (Eday)                                                                     |   2  | Python          |
 +----------------------------------------+------------------------------------------------------------------------------------------------------+------+-----------------+
@@ -538,8 +542,6 @@ Instead, the CMORization is performed 'on the fly' when running a recipe.
 Native datasets can be hosted either under a dedicated project (usually done
 for native model output) or under project ``native6`` (usually done for native
 reanalysis/observational products).
-These projects are configured in the :ref:`config-developer file
-<esmvalcore:configure_native_models>`.
 
 A list of all currently supported native datasets is :ref:`provided here
 <esmvalcore:read_native_datasets>`.
